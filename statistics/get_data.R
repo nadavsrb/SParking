@@ -1,6 +1,6 @@
 options(warn=-1)
 
-setwd("~/R/HACKATHON")
+setwd(getSrcDirectory()[1])
 #Get available Parking id
 require(geosphere,quietly = TRUE)
 AVG<-read.csv("Avg.csv")

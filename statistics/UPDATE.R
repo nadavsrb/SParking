@@ -1,6 +1,6 @@
 #Rscript_directory <- dirname(rstudioapi::getSourceEditorContext()$path)
 #setwd(Rscript_directory)
-setwd("~/R/HACKATHON/")
+setwd(getSrcDirectory()[1])
 #UPDATE
 
 #inputs
