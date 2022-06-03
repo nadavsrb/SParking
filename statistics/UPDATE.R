@@ -28,7 +28,7 @@ current_hour<-as.integer(substr(current_time,1,unlist(gregexpr(':', current_time
 current_minute<-as.integer(substr(current_time,unlist(gregexpr(':', current_time))[1]+1,nchar(current_time)))
 
 #handeling NA
-if(is.na(original_time)) {
+if(sum(is.na(original_time))) {
   db_last_time[db_last_time$id==id,"time"]<-current_time
   db_last_value[db_last_value$id==id,"last_value"]<-num_locs_empty
   write.csv(db_last_time,"Last_Time_Update.csv",row.names = FALSE)
