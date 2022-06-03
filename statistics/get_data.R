@@ -46,9 +46,9 @@ time<-args[4]
   n_real<-floor(b)
   R<-dist_n[length(dist_n)]
   if(nrow(max_dist) == 0) {
-    final<-paste("{r:",Rmax,", parking_ids:[ ], average_avaliable: ",0,"}")
+    final<-paste("{'r':",Rmax,", 'parking_ids':[ ], 'average_avaliable': ",0,"}")
   }
   if(nrow(max_dist) != 0) {
-  final<-paste("{r:",R,", parking_ids:[",do.call(paste,as.list(c(max_dist_wo_X[1:d],sep=","))),"], average_avaliable: ",n_real,"}")
+  final<-paste("{'r':",R,", 'parking_ids':[",do.call(paste,as.list(c(max_dist_wo_X[1:d],sep=","))),"], 'average_avaliable': ",n_real,"}")
   }
   cat(final)
