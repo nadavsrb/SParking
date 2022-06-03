@@ -1,6 +1,5 @@
 #Rscript_directory <- dirname(rstudioapi::getSourceEditorContext()$path)
 #setwd(Rscript_directory)
-setwd(getSrcDirectory()[1])
 #UPDATE
 
 #inputs
