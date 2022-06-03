@@ -19,6 +19,11 @@ lon<-as.numeric(args[2])
 lat<-as.numeric(args[3])
 time<-args[4]
 
+cat(n)
+cat(lon)
+cat(lat)
+cat(time)
+
   time<-as.character(time)
   dist_id<-data.frame(dist=rep(0,nrow(id_info)),id=id_info[,1])#vector of dist from some place
   for (i in 1:nrow(id_info)) {
