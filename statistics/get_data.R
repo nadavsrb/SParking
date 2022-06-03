@@ -12,7 +12,7 @@ args<- commandArgs(trailingOnly = TRUE)
 #lat<-34
 #time<-"18:20"
 
-
+Rmax<-1500
 
 n<-as.numeric(args[1])
 lon<-as.numeric(args[2])
@@ -27,7 +27,7 @@ time<-args[4]
   dist_id<-na.omit(dist_id)
   dist_id<-dist_id[order(dist_id[,1]),]
   x<-which(AVG[,1]==as.integer(substr(time,1,unlist(regexpr(":",time)-1)[1])))
-  max_dist<-dist_id[dist_id[,1]<1500,]
+  max_dist<-dist_id[dist_id[,1]<Rmax,]
   b<-0
   for (i in 1:nrow(max_dist)) {
     y<-max_dist[i,2]#take minimum ids
@@ -45,5 +45,10 @@ time<-args[4]
   max_dist_wo_X<-substr(max_dist[,2],2,length(max_dist[,2]))  
   n_real<-floor(b)
   R<-dist_n[length(dist_n)]
+  if(nrow(max_dist) == 0) {
+    final<-paste("{r:",Rmax,", parking_ids:[ ], average_avaliable: ",0,"}")
+  }
+  if(nrow(max_dist) != 0) {
   final<-paste("{r:",R,", parking_ids:[",do.call(paste,as.list(c(max_dist_wo_X[1:d],sep=","))),"], average_avaliable: ",n_real,"}")
+  }
   cat(final)
