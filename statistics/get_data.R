@@ -1,5 +1,5 @@
 options(warn=-1)
-setwd("C:\Users\nadav\Desktop\SParking\SParking\statistics")
+setwd("C:/Users/nadav/Desktop/SParking/SParking/statistics")
 
 #Get available Parking id
 require(geosphere,quietly = TRUE)

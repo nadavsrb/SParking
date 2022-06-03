@@ -1,8 +1,7 @@
 #Rscript_directory <- dirname(rstudioapi::getSourceEditorContext()$path)
 #setwd(Rscript_directory)
 #UPDATE
-setwd("C:\Users\nadav\Desktop\SParking\SParking\statistics")
-#inputs
+setwd("C:/Users/nadav/Desktop/SParking/SParking/statistics")#inputs
 args = commandArgs(trailingOnly=TRUE)
 id<-as.numeric(args[1])
 num_locs_empty<-as.numeric(args[2])
