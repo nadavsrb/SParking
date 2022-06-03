@@ -42,7 +42,9 @@ time<-args[4]
     }
   }
   dist_n<-dist_id[1:d,1]#vector of the minimum distances
-  max_dist_wo_X<-substr(max_dist[,2],2,length(max_dist[,2]))  
+  
+  max_dist_wo_X<-unlist(lapply(max_dist[,2],FUN = function(x) substr(x,2,nchar(x))))
+  
   n_real<-floor(b)
   R<-dist_n[length(dist_n)]
   if(nrow(max_dist) == 0) {
@@ -52,3 +54,5 @@ time<-args[4]
   final<-paste("{\"r\":",R,", \"parking_ids\":[",do.call(paste,as.list(c(max_dist_wo_X[1:d],sep=","))),"], \"average_avaliable\": ",n_real,"}")
   }
   cat(final)
+
+  
