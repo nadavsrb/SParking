@@ -2,7 +2,7 @@
 #setwd(Rscript_directory)
 
 #ADD_PARKING_LOCATION
-
+setwd("C:\Users\nadav\Desktop\SParking\SParking\statistics")
 #inputs
 args = commandArgs(trailingOnly=TRUE)
 id<-args[1]
