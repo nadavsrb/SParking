@@ -34,6 +34,9 @@ time<-args[4]
     park<-AVG[x,y]
     b=b+park
     d=i
+    if(nrow(max_dist) == 0){
+      break
+    }
     if (b > n){
       break
     }
