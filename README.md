@@ -1,5 +1,4 @@
 # SParking
-האקתון
 
 This project intends to create the infrastructure for "smart parking spaces". In those spaces, people can park only if they reserve the parking lot, and are dirceted by the system into the parking spot.
 This allowes people to get rid of the need to travel around the city, looking for an empty spot. Instead, they simply declare thier need in a parking spot, and the system will guide them to an empty spot.
