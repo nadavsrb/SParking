@@ -6,9 +6,9 @@ setwd("C:/Users/nadav/Desktop/SParking/SParking/statistics")
 #inputs
 args = commandArgs(trailingOnly=TRUE)
 id<-args[1]
-long<-args[2]
-lat<-args[3]
-number_of_spots<-args[4]
+long<-as.numeric(args[2])
+lat<-as.numeric(args[3])
+number_of_spots<-as.numeric(args[4])
 
 #reading the dataframes
 db_info<-read.csv("id_info.csv",header=TRUE)
